@@ -1,0 +1,508 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3050 900" width="3050" height="900" style="background:#f1f5f9; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38b6ff" />
+      <stop offset="100%" stop-color="#169be5" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- ========================================================
+       SCREEN 01: LOGIN
+       ======================================================== -->
+  <g id="Screen-01-Login" transform="translate(40, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">01 — Login</text>
+    <!-- Device Body -->
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <!-- Status Bar -->
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Content -->
+    <!-- Logo Box -->
+    <rect x="158" y="90" width="64" height="64" rx="18" fill="#ffffff" stroke="#29b6f6" stroke-width="2" />
+    <rect x="174" y="106" width="32" height="32" rx="6" fill="none" stroke="#29b6f6" stroke-width="2.5" />
+    <!-- Titles -->
+    <text x="190" y="190" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">Masuk ke Stokku</text>
+    <text x="190" y="212" text-anchor="middle" font-size="11" fill="#64748b">Kelola stok toko Anda dengan mudah &amp; efisien</text>
+
+    <!-- Inputs -->
+    <!-- Email -->
+    <text x="36" y="260" font-size="10" font-weight="700" fill="#475569" letter-spacing="0.5">EMAIL / USERNAME</text>
+    <rect x="36" y="270" width="308" height="44" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="50" y="297" font-size="13" fill="#1e293b">budi@tokoberkah.com</text>
+
+    <!-- Password -->
+    <text x="36" y="340" font-size="10" font-weight="700" fill="#475569" letter-spacing="0.5">KATA SANDI</text>
+    <rect x="36" y="350" width="308" height="44" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="50" y="377" font-size="14" fill="#64748b">••••••••</text>
+    <text x="344" y="410" text-anchor="end" font-size="11" font-weight="600" fill="#0284c7">Lupa Kata Sandi?</text>
+
+    <!-- Button MASUK -->
+    <rect x="36" y="430" width="308" height="46" rx="23" fill="url(#primaryGrad)" />
+    <text x="190" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="0.5">MASUK</text>
+
+    <!-- Divider -->
+    <line x1="36" y1="510" x2="344" y2="510" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="130" y="500" width="120" height="20" fill="#f8fafc" />
+    <text x="190" y="514" text-anchor="middle" font-size="10.5" fill="#94a3b8">Atau masuk dengan</text>
+
+    <!-- Social Buttons -->
+    <rect x="36" y="540" width="148" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="110" y="565" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1e293b">Akun Demo</text>
+
+    <rect x="196" y="540" width="148" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="270" y="565" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1e293b">Google</text>
+
+    <!-- Footer link -->
+    <text x="190" y="740" text-anchor="middle" font-size="11" fill="#64748b">Belum punya akun? <tspan fill="#0284c7" font-weight="700">Daftar</tspan></text>
+    <!-- Home Bar -->
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 02: REGISTRASI
+       ======================================================== -->
+  <g id="Screen-02-Registrasi" transform="translate(470, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">02 — Registrasi</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <!-- Status Bar -->
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Header with Back -->
+    <circle cx="48" cy="65" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <path d="M51 60 L45 65 L51 70" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" />
+    <text x="74" y="64" font-size="15" font-weight="800" fill="#1e293b">Buat Akun Baru</text>
+    <text x="74" y="77" font-size="10" fill="#64748b">Daftar sebagai pemilik toko baru</text>
+
+    <!-- Fields -->
+    <!-- Nama Lengkap -->
+    <text x="36" y="112" font-size="9.5" font-weight="700" fill="#475569">NAMA LENGKAP</text>
+    <rect x="36" y="120" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="145" font-size="12" fill="#1e293b">Budi Santoso</text>
+
+    <!-- Nama Toko -->
+    <text x="36" y="180" font-size="9.5" font-weight="700" fill="#475569">NAMA TOKO</text>
+    <rect x="36" y="188" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="213" font-size="12" fill="#1e293b">Toko Kelontong Berkah</text>
+
+    <!-- Email -->
+    <text x="36" y="248" font-size="9.5" font-weight="700" fill="#475569">EMAIL</text>
+    <rect x="36" y="256" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="281" font-size="12" fill="#1e293b">budi@tokoberkah.com</text>
+
+    <!-- WhatsApp -->
+    <text x="36" y="316" font-size="9.5" font-weight="700" fill="#475569">NOMOR WHATSAPP</text>
+    <rect x="36" y="324" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="349" font-size="12" fill="#1e293b">081234567890</text>
+
+    <!-- Kata Sandi -->
+    <text x="36" y="384" font-size="9.5" font-weight="700" fill="#475569">KATA SANDI</text>
+    <rect x="36" y="392" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="417" font-size="13" fill="#64748b">••••••••</text>
+
+    <!-- Konfirmasi Kata Sandi -->
+    <text x="36" y="452" font-size="9.5" font-weight="700" fill="#475569">KONFIRMASI KATA SANDI</text>
+    <rect x="36" y="460" width="308" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="485" font-size="13" fill="#64748b">••••••••</text>
+
+    <!-- Checkbox -->
+    <rect x="36" y="520" width="16" height="16" rx="4" fill="#29b6f6" />
+    <path d="M40 528 L43 531 L48 525" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
+    <text x="60" y="533" font-size="10" fill="#64748b">Saya menyetujui Syarat &amp; Ketentuan</text>
+
+    <!-- Submit Button -->
+    <rect x="36" y="560" width="308" height="46" rx="23" fill="url(#primaryGrad)" />
+    <text x="190" y="588" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">DAFTAR SEKARANG</text>
+
+    <text x="190" y="640" text-anchor="middle" font-size="11" fill="#64748b">Sudah punya akun? <tspan fill="#0284c7" font-weight="700">Masuk</tspan></text>
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 03: DASHBOARD BERANDA
+       ======================================================== -->
+  <g id="Screen-03-Dashboard" transform="translate(900, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">03 — Dashboard Beranda</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Top User Bar -->
+    <text x="36" y="70" font-size="18" font-weight="800" fill="#1e293b">Halo, Budi</text>
+    <text x="36" y="86" font-size="11" fill="#64748b">Toko Kelontong Berkah</text>
+    <circle cx="330" cy="74" r="18" fill="#e0f2fe" stroke="#38b6ff" stroke-width="1.5" />
+    <path d="M330 70 A 5 5 0 1 0 330 80 A 5 5 0 1 0 330 70 Z" fill="#0284c7" />
+
+    <!-- Metric Cards -->
+    <rect x="36" y="110" width="146" height="74" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="52" y="146" font-size="22" font-weight="800" fill="#1e293b">1,284</text>
+    <text x="52" y="166" font-size="11" fill="#64748b">Total Stok</text>
+
+    <rect x="198" y="110" width="146" height="74" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="214" y="146" font-size="22" font-weight="800" fill="#1e293b">12</text>
+    <circle cx="248" cy="138" r="4" fill="#ef4444" />
+    <text x="214" y="166" font-size="11" fill="#64748b">Stok Menipis</text>
+
+    <!-- Approval Section -->
+    <text x="36" y="216" font-size="12" font-weight="700" fill="#1e293b">Menunggu Persetujuan</text>
+    <text x="344" y="216" text-anchor="end" font-size="11" font-weight="600" fill="#0284c7">Lihat Semua</text>
+
+    <rect x="36" y="230" width="308" height="66" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="36" y="230" width="5" height="66" rx="2" fill="#f59e0b" />
+    <text x="52" y="254" font-size="11.5" font-weight="700" fill="#1e293b">Perubahan Harga - Minyak Goreng</text>
+    <text x="52" y="272" font-size="9.5" fill="#64748b">Rp 14.000 &rarr; Rp 15.000 • Kasir Budi</text>
+    <!-- Buttons -->
+    <circle cx="304" cy="263" r="12" fill="#d1fae5" />
+    <text x="304" y="267" text-anchor="middle" font-size="11" fill="#059669" font-weight="800">✓</text>
+    <circle cx="330" cy="263" r="12" fill="#fee2e2" />
+    <text x="330" y="267" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="800">✕</text>
+
+    <!-- Attention Section -->
+    <text x="36" y="324" font-size="12" font-weight="700" fill="#1e293b">Produk Perlu Perhatian</text>
+
+    <!-- Product 1 -->
+    <rect x="36" y="340" width="308" height="60" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="350" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="367" font-size="12" font-weight="700" fill="#1e293b">Minyak Goreng 1L</text>
+    <text x="96" y="384" font-size="11" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <rect x="290" y="350" width="44" height="18" rx="9" fill="#fee2e2" />
+    <text x="312" y="363" text-anchor="middle" font-size="9" font-weight="700" fill="#dc2626">Kritis</text>
+    <text x="334" y="382" text-anchor="end" font-size="10" fill="#64748b">Stok: 2</text>
+
+    <!-- Product 2 -->
+    <rect x="36" y="410" width="308" height="60" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="420" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="437" font-size="12" font-weight="700" fill="#1e293b">Beras Premium 5kg</text>
+    <text x="96" y="454" font-size="11" font-weight="700" fill="#0284c7">Rp 68.000</text>
+    <rect x="286" y="420" width="48" height="18" rx="9" fill="#fef3c7" />
+    <text x="310" y="433" text-anchor="middle" font-size="9" font-weight="700" fill="#d97706">Menipis</text>
+    <text x="334" y="452" text-anchor="end" font-size="10" fill="#64748b">Stok: 5</text>
+
+    <!-- Product 3 -->
+    <rect x="36" y="480" width="308" height="60" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="490" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="507" font-size="12" font-weight="700" fill="#1e293b">Gula Pasir 1kg</text>
+    <text x="96" y="524" font-size="11" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <rect x="274" y="490" width="60" height="18" rx="9" fill="#d1fae5" />
+    <text x="304" y="503" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">Stok Aman</text>
+    <text x="334" y="522" text-anchor="end" font-size="10" fill="#64748b">Stok: 45</text>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="736" width="380" height="64" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="50" y="770" text-anchor="middle" font-size="10" font-weight="700" fill="#0284c7">Beranda</text>
+    <text x="145" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Stok</text>
+    <text x="240" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Kategori</text>
+    <text x="330" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Profil</text>
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 04: MASTER DATA PRODUK (LIST)
+       ======================================================== -->
+  <g id="Screen-04-Produk-List" transform="translate(1330, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">04 — Master Data Produk (List)</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Header -->
+    <circle cx="48" cy="65" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <path d="M51 60 L45 65 L51 70" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" />
+    <text x="74" y="64" font-size="15" font-weight="800" fill="#1e293b">Master Data Produk</text>
+    <text x="74" y="77" font-size="10" fill="#64748b">Kelola produk toko Anda</text>
+
+    <!-- Search -->
+    <rect x="36" y="96" width="308" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="50" y="120" font-size="11.5" fill="#94a3b8">🔍 Cari nama / SKU produk...</text>
+
+    <!-- Chips -->
+    <rect x="36" y="146" width="60" height="28" rx="14" fill="url(#primaryGrad)" />
+    <text x="66" y="164" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Semua</text>
+    <rect x="104" y="146" width="70" height="28" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="139" y="164" text-anchor="middle" font-size="11" fill="#64748b">Sembako</text>
+    <rect x="182" y="146" width="70" height="28" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="217" y="164" text-anchor="middle" font-size="11" fill="#64748b">Minuman</text>
+    <rect x="260" y="146" width="60" height="28" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="290" y="164" text-anchor="middle" font-size="11" fill="#64748b">Snack</text>
+
+    <!-- List Items -->
+    <!-- Item 1 -->
+    <rect x="36" y="190" width="308" height="56" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="198" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="215" font-size="12" font-weight="700" fill="#1e293b">Minyak Goreng 1L</text>
+    <text x="96" y="231" font-size="11" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <rect x="290" y="198" width="44" height="18" rx="9" fill="#fee2e2" />
+    <text x="312" y="211" text-anchor="middle" font-size="9" font-weight="700" fill="#dc2626">Kritis</text>
+    <text x="334" y="230" text-anchor="end" font-size="10" fill="#64748b">Stok: 2</text>
+
+    <!-- Item 2 -->
+    <rect x="36" y="254" width="308" height="56" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="262" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="279" font-size="12" font-weight="700" fill="#1e293b">Beras Premium 5kg</text>
+    <text x="96" y="295" font-size="11" font-weight="700" fill="#0284c7">Rp 68.000</text>
+    <rect x="286" y="262" width="48" height="18" rx="9" fill="#fef3c7" />
+    <text x="310" y="275" text-anchor="middle" font-size="9" font-weight="700" fill="#d97706">Menipis</text>
+    <text x="334" y="294" text-anchor="end" font-size="10" fill="#64748b">Stok: 5</text>
+
+    <!-- Item 3 -->
+    <rect x="36" y="318" width="308" height="56" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="326" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="343" font-size="12" font-weight="700" fill="#1e293b">Gula Pasir 1kg</text>
+    <text x="96" y="359" font-size="11" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <rect x="274" y="326" width="60" height="18" rx="9" fill="#d1fae5" />
+    <text x="304" y="339" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">Stok Aman</text>
+    <text x="334" y="358" text-anchor="end" font-size="10" fill="#64748b">Stok: 45</text>
+
+    <!-- Item 4 -->
+    <rect x="36" y="382" width="308" height="56" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="390" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="407" font-size="12" font-weight="700" fill="#1e293b">Teh Celup Kotak</text>
+    <text x="96" y="423" font-size="11" font-weight="700" fill="#0284c7">Rp 6.500</text>
+    <rect x="274" y="390" width="60" height="18" rx="9" fill="#d1fae5" />
+    <text x="304" y="403" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">Stok Aman</text>
+    <text x="334" y="422" text-anchor="end" font-size="10" fill="#64748b">Stok: 30</text>
+
+    <!-- Item 5 -->
+    <rect x="36" y="446" width="308" height="56" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="454" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+    <text x="96" y="471" font-size="12" font-weight="700" fill="#1e293b">Kopi Sachet 10pcs</text>
+    <text x="96" y="487" font-size="11" font-weight="700" fill="#0284c7">Rp 12.000</text>
+    <rect x="274" y="454" width="60" height="18" rx="9" fill="#d1fae5" />
+    <text x="304" y="467" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">Stok Aman</text>
+    <text x="334" y="486" text-anchor="end" font-size="10" fill="#64748b">Stok: 25</text>
+
+    <!-- FAB -->
+    <circle cx="320" cy="690" r="26" fill="url(#primaryGrad)" filter="url(#shadow)" />
+    <text x="320" y="697" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">+</text>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="736" width="380" height="64" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="50" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Beranda</text>
+    <text x="145" y="770" text-anchor="middle" font-size="10" font-weight="700" fill="#0284c7">Stok</text>
+    <text x="240" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Kategori</text>
+    <text x="330" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Profil</text>
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 05: TAMBAH PRODUK (FORM)
+       ======================================================== -->
+  <g id="Screen-05-Tambah-Produk" transform="translate(1760, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">05 — Tambah Produk (Form)</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Header -->
+    <circle cx="48" cy="65" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <path d="M51 60 L45 65 L51 70" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" />
+    <text x="74" y="64" font-size="15" font-weight="800" fill="#1e293b">Tambah Produk Baru</text>
+    <text x="74" y="77" font-size="10" fill="#64748b">Lengkapi detail data produk</text>
+
+    <!-- Photo Box -->
+    <rect x="36" y="100" width="308" height="90" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="190" y="142" text-anchor="middle" font-size="18" fill="#0284c7">📷</text>
+    <text x="190" y="164" text-anchor="middle" font-size="11" font-weight="600" fill="#0284c7">+ Foto Produk</text>
+
+    <!-- Nama Produk -->
+    <text x="36" y="214" font-size="9.5" font-weight="700" fill="#475569">NAMA PRODUK</text>
+    <rect x="36" y="222" width="308" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="245" font-size="11.5" fill="#94a3b8">Contoh: Minyak Goreng 1L</text>
+
+    <!-- SKU -->
+    <text x="36" y="280" font-size="9.5" font-weight="700" fill="#475569">KODE / SKU PRODUK</text>
+    <rect x="36" y="288" width="308" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="311" font-size="11.5" fill="#94a3b8">cth: KODE-BRG0001</text>
+
+    <!-- Kategori -->
+    <text x="36" y="346" font-size="9.5" font-weight="700" fill="#475569">KATEGORI</text>
+    <rect x="36" y="354" width="308" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="377" font-size="11.5" fill="#1e293b">Pilih kategori produk</text>
+    <text x="330" y="377" text-anchor="end" font-size="10" fill="#64748b">▼</text>
+
+    <!-- 2 Cols: Harga Grosir & Eceran -->
+    <text x="36" y="412" font-size="9.5" font-weight="700" fill="#475569">HARGA GROSIR</text>
+    <rect x="36" y="420" width="146" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="443" font-size="11.5" fill="#94a3b8">Rp 0</text>
+
+    <text x="198" y="412" font-size="9.5" font-weight="700" fill="#475569">HARGA ECERAN</text>
+    <rect x="198" y="420" width="146" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="210" y="443" font-size="11.5" fill="#94a3b8">Rp 0</text>
+
+    <!-- 2 Cols: Stok Awal & Batas Min -->
+    <text x="36" y="478" font-size="9.5" font-weight="700" fill="#475569">STOK AWAL</text>
+    <rect x="36" y="486" width="146" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="48" y="509" font-size="11.5" fill="#94a3b8">0</text>
+
+    <text x="198" y="478" font-size="9.5" font-weight="700" fill="#475569">BATAS MINIMUM</text>
+    <rect x="198" y="486" width="146" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="210" y="509" font-size="11.5" fill="#1e293b">5</text>
+
+    <!-- Submit Button -->
+    <rect x="36" y="550" width="308" height="46" rx="23" fill="url(#primaryGrad)" />
+    <text x="190" y="578" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">SIMPAN PRODUK</text>
+
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 06: MASTER DATA KATEGORI/SUPPLIER
+       ======================================================== -->
+  <g id="Screen-06-Kategori-Supplier" transform="translate(2190, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">06 — Master Data Kategori/Supplier</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#0f172a">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#0f172a" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#0f172a" />
+
+    <!-- Header -->
+    <circle cx="48" cy="65" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <path d="M51 60 L45 65 L51 70" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" />
+    <text x="74" y="64" font-size="15" font-weight="800" fill="#1e293b">Kategori &amp; Supplier</text>
+    <text x="74" y="77" font-size="10" fill="#64748b">Kelola data master pengelompokan</text>
+
+    <!-- Segmented Tabs -->
+    <rect x="36" y="96" width="308" height="38" rx="19" fill="#e2e8f0" />
+    <rect x="38" y="98" width="152" height="34" rx="17" fill="url(#primaryGrad)" />
+    <text x="114" y="119" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Kategori</text>
+    <text x="266" y="119" text-anchor="middle" font-size="12" font-weight="600" fill="#64748b">Supplier</text>
+
+    <text x="36" y="162" font-size="12" font-weight="700" fill="#1e293b">Daftar Kategori (5)</text>
+    <text x="344" y="162" text-anchor="end" font-size="11" font-weight="600" fill="#0284c7">+ Tambah</text>
+
+    <!-- Cat 1 -->
+    <rect x="36" y="176" width="308" height="54" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="184" width="38" height="38" rx="8" fill="#f1f5f9" />
+    <text x="96" y="202" font-size="12.5" font-weight="700" fill="#1e293b">Sembako</text>
+    <text x="96" y="217" font-size="10" fill="#64748b">240 produk</text>
+    <text x="332" y="208" text-anchor="end" font-size="13" fill="#94a3b8">&gt;</text>
+
+    <!-- Cat 2 -->
+    <rect x="36" y="238" width="308" height="54" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="246" width="38" height="38" rx="8" fill="#f1f5f9" />
+    <text x="96" y="264" font-size="12.5" font-weight="700" fill="#1e293b">Minuman</text>
+    <text x="96" y="279" font-size="10" fill="#64748b">85 produk</text>
+    <text x="332" y="270" text-anchor="end" font-size="13" fill="#94a3b8">&gt;</text>
+
+    <!-- Cat 3 -->
+    <rect x="36" y="300" width="308" height="54" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="308" width="38" height="38" rx="8" fill="#f1f5f9" />
+    <text x="96" y="326" font-size="12.5" font-weight="700" fill="#1e293b">Snack &amp; Makanan Ringan</text>
+    <text x="96" y="341" font-size="10" fill="#64748b">120 produk</text>
+    <text x="332" y="332" text-anchor="end" font-size="13" fill="#94a3b8">&gt;</text>
+
+    <!-- Cat 4 -->
+    <rect x="36" y="362" width="308" height="54" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="370" width="38" height="38" rx="8" fill="#f1f5f9" />
+    <text x="96" y="388" font-size="12.5" font-weight="700" fill="#1e293b">Perlengkapan Mandi</text>
+    <text x="96" y="403" font-size="10" fill="#64748b">45 produk</text>
+    <text x="332" y="394" text-anchor="end" font-size="13" fill="#94a3b8">&gt;</text>
+
+    <!-- Cat 5 -->
+    <rect x="36" y="424" width="308" height="54" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="432" width="38" height="38" rx="8" fill="#f1f5f9" />
+    <text x="96" y="450" font-size="12.5" font-weight="700" fill="#1e293b">Rokok</text>
+    <text x="96" y="465" font-size="10" fill="#64748b">32 produk</text>
+    <text x="332" y="456" text-anchor="end" font-size="13" fill="#94a3b8">&gt;</text>
+
+    <!-- FAB -->
+    <circle cx="320" cy="690" r="26" fill="url(#primaryGrad)" filter="url(#shadow)" />
+    <text x="320" y="697" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">+</text>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="736" width="380" height="64" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="50" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Beranda</text>
+    <text x="145" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Stok</text>
+    <text x="240" y="770" text-anchor="middle" font-size="10" font-weight="700" fill="#0284c7">Kategori</text>
+    <text x="330" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Profil</text>
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+
+  <!-- ========================================================
+       SCREEN 07: PROFIL & LOGOUT
+       ======================================================== -->
+  <g id="Screen-07-Profil-Logout" transform="translate(2620, 40)">
+    <text x="190" y="-14" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">07 — Profil &amp; Logout</text>
+    <rect width="380" height="800" rx="36" fill="#f8fafc" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+    <!-- Top Blue Hero Banner -->
+    <path d="M 0 36 A 36 36 0 0 1 36 0 L 344 0 A 36 36 0 0 1 380 36 L 380 180 A 24 24 0 0 1 356 204 L 24 204 A 24 24 0 0 1 0 180 Z" fill="url(#primaryGrad)" />
+    <!-- White Status Bar -->
+    <text x="36" y="32" font-size="12" font-weight="700" fill="#ffffff">09:41</text>
+    <circle cx="330" cy="28" r="3" fill="#ffffff" />
+    <rect x="340" y="24" width="18" height="9" rx="2" fill="none" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="342" y="26" width="11" height="5" rx="1" fill="#ffffff" />
+
+    <!-- Avatar -->
+    <circle cx="190" cy="90" r="36" fill="#ffffff" filter="url(#shadow)" />
+    <circle cx="190" cy="80" r="12" fill="#0284c7" />
+    <path d="M168 108 C168 96, 212 96, 212 108" fill="#0284c7" />
+    <text x="190" y="152" text-anchor="middle" font-size="17" font-weight="800" fill="#ffffff">Budi Santoso</text>
+    <!-- Role badge -->
+    <rect x="145" y="162" width="90" height="20" rx="10" fill="rgba(255,255,255,0.25)" />
+    <text x="190" y="176" text-anchor="middle" font-size="10.5" font-weight="600" fill="#ffffff">Pemilik Toko</text>
+
+    <!-- Menu List -->
+    <!-- Menu 1 -->
+    <rect x="36" y="222" width="308" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="229" width="34" height="34" rx="8" fill="#f1f5f9" />
+    <text x="92" y="244" font-size="12" font-weight="700" fill="#1e293b">Informasi Akun</text>
+    <text x="92" y="258" font-size="9.5" fill="#64748b">Ganti email, nomor WhatsApp</text>
+    <text x="332" y="251" text-anchor="end" font-size="12" fill="#94a3b8">&gt;</text>
+
+    <!-- Menu 2 -->
+    <rect x="36" y="280" width="308" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="287" width="34" height="34" rx="8" fill="#f1f5f9" />
+    <text x="92" y="302" font-size="12" font-weight="700" fill="#1e293b">Toko Saya</text>
+    <text x="92" y="316" font-size="9.5" fill="#64748b">Profil toko, alamat &amp; logo</text>
+    <text x="332" y="309" text-anchor="end" font-size="12" fill="#94a3b8">&gt;</text>
+
+    <!-- Menu 3 -->
+    <rect x="36" y="338" width="308" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="345" width="34" height="34" rx="8" fill="#f1f5f9" />
+    <text x="92" y="360" font-size="12" font-weight="700" fill="#1e293b">Kelola Pengguna / Staf</text>
+    <text x="92" y="374" font-size="9.5" fill="#64748b">Atur hak akses &amp; kasir</text>
+    <text x="332" y="367" text-anchor="end" font-size="12" fill="#94a3b8">&gt;</text>
+
+    <!-- Menu 4 -->
+    <rect x="36" y="396" width="308" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="403" width="34" height="34" rx="8" fill="#f1f5f9" />
+    <text x="92" y="418" font-size="12" font-weight="700" fill="#1e293b">Riwayat Persetujuan</text>
+    <text x="92" y="432" font-size="9.5" fill="#64748b">Daftar persetujuan stok</text>
+    <text x="332" y="425" text-anchor="end" font-size="12" fill="#94a3b8">&gt;</text>
+
+    <!-- Menu 5 -->
+    <rect x="36" y="454" width="308" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <rect x="46" y="461" width="34" height="34" rx="8" fill="#f1f5f9" />
+    <text x="92" y="476" font-size="12" font-weight="700" fill="#1e293b">Keamanan</text>
+    <text x="92" y="490" font-size="9.5" fill="#64748b">Ubah kata sandi &amp; PIN</text>
+    <text x="332" y="483" text-anchor="end" font-size="12" fill="#94a3b8">&gt;</text>
+
+    <!-- Logout Button -->
+    <rect x="36" y="520" width="308" height="44" rx="22" fill="#ffffff" stroke="#ef4444" stroke-width="1.5" />
+    <text x="190" y="547" text-anchor="middle" font-size="12" font-weight="700" fill="#ef4444">KELUAR (LOGOUT)</text>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="736" width="380" height="64" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="50" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Beranda</text>
+    <text x="145" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Stok</text>
+    <text x="240" y="770" text-anchor="middle" font-size="10" fill="#94a3b8">Kategori</text>
+    <text x="330" y="770" text-anchor="middle" font-size="10" font-weight="700" fill="#0284c7">Profil</text>
+    <rect x="130" y="784" width="120" height="4" rx="2" fill="#cbd5e1" />
+  </g>
+</svg>

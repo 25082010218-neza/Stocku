@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2850 960" width="2850" height="960" style="background:#0b0f19; font-family:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="deskPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38b6ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="managerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- ========================================================
+       DESKTOP SCREEN 00: PORTAL PILIH PERAN (1280 x 850)
+       ======================================================== -->
+  <g id="Desktop-00-Role-Selector" transform="translate(40, 50)">
+    <text x="640" y="-18" text-anchor="middle" font-size="16" font-weight="700" fill="#94a3b8">Desktop 00 — Portal Pemilihan Peran (Manager vs Admin)</text>
+    
+    <!-- Desktop Browser Window Frame -->
+    <rect width="1280" height="850" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2" filter="url(#cardShadow)" />
+    <!-- Browser Top Bar -->
+    <rect width="1280" height="42" rx="16" fill="#1e293b" />
+    <circle cx="24" cy="21" r="6" fill="#ef4444" />
+    <circle cx="44" cy="21" r="6" fill="#f59e0b" />
+    <circle cx="64" cy="21" r="6" fill="#10b981" />
+    <rect x="240" y="8" width="800" height="26" rx="6" fill="#0f172a" />
+    <text x="640" y="25" text-anchor="middle" font-size="11" fill="#94a3b8">https://stokku-suite.app/select-role</text>
+
+    <!-- Inner Content Card -->
+    <rect x="200" y="100" width="880" height="680" rx="20" fill="#ffffff" filter="url(#cardShadow)" />
+    
+    <!-- Brand -->
+    <rect x="608" y="140" width="64" height="64" rx="16" fill="url(#deskPrimary)" />
+    <rect x="622" y="154" width="36" height="36" rx="6" fill="none" stroke="#ffffff" stroke-width="3" />
+    <text x="640" y="240" text-anchor="middle" font-size="28" font-weight="800" fill="#0284c7">Stokku Desktop Suite</text>
+    <text x="640" y="268" text-anchor="middle" font-size="14" fill="#64748b">Sistem Manajemen Inventaris &amp; POS Modern. Pilih peran masuk:</text>
+
+    <!-- Role Card 1: Manager -->
+    <rect x="250" y="310" width="360" height="360" rx="16" fill="#fafcff" stroke="#f59e0b" stroke-width="2" />
+    <rect x="278" y="338" width="56" height="56" rx="14" fill="url(#managerGrad)" />
+    <text x="306" y="373" text-anchor="middle" font-size="24" fill="#ffffff">👑</text>
+    <rect x="278" y="410" width="90" height="22" rx="11" fill="#fef3c7" />
+    <text x="323" y="425" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">AKSES PENUH</text>
+    <text x="278" y="460" font-size="18" font-weight="800" fill="#0f172a">Manager (Pemilik Toko)</text>
+    <text x="278" y="485" font-size="12" fill="#64748b">Akses penuh mengelola harga produk, persetujuan perubahan harga, inventaris, dan staf toko.</text>
+    <line x1="278" y1="525" x2="570" y2="525" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4" />
+    <text x="278" y="550" font-size="12" fill="#334155"><tspan fill="#10b981" font-weight="800">&#10003; </tspan>Dapat mengubah harga produk (Grosir &amp; Eceran)</text>
+    <text x="278" y="575" font-size="12" fill="#334155"><tspan fill="#10b981" font-weight="800">&#10003; </tspan>Setujui / tolak pengajuan perubahan harga</text>
+    <text x="278" y="600" font-size="12" fill="#334155"><tspan fill="#10b981" font-weight="800">&#10003; </tspan>Akses penuh data inventaris, supplier, dan staf</text>
+    <rect x="278" y="620" width="304" height="34" rx="8" fill="url(#managerGrad)" />
+    <text x="430" y="642" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">MASUK SEBAGAI MANAGER</text>
+
+    <!-- Role Card 2: Admin -->
+    <rect x="670" y="310" width="360" height="360" rx="16" fill="#fafcff" stroke="#38b6ff" stroke-width="2" />
+    <rect x="698" y="338" width="56" height="56" rx="14" fill="url(#deskPrimary)" />
+    <text x="726" y="373" text-anchor="middle" font-size="24" fill="#ffffff">🛒</text>
+    <rect x="698" y="410" width="124" height="22" rx="11" fill="#e0f2fe" />
+    <text x="760" y="425" text-anchor="middle" font-size="10" font-weight="700" fill="#0369a1">INPUT &amp; CEK STOK</text>
+    <text x="698" y="460" font-size="18" font-weight="800" fill="#0f172a">Admin (Admin Stok)</text>
+    <text x="698" y="485" font-size="12" fill="#64748b">Hak operasional untuk menginput produk &amp; stok baru serta mengecek ketersediaan total stok.</text>
+    <line x1="698" y1="525" x2="990" y2="525" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4" />
+    <text x="698" y="550" font-size="12" fill="#334155"><tspan fill="#10b981" font-weight="800">&#10003; </tspan>Dapat menginput produk &amp; stok baru</text>
+    <text x="698" y="575" font-size="12" fill="#334155"><tspan fill="#10b981" font-weight="800">&#10003; </tspan>Dapat melihat total stok barang toko</text>
+    <text x="698" y="600" font-size="12" fill="#64748b"><tspan fill="#ef4444" font-weight="800">&#10005; </tspan>Terkunci dari edit data setelah disimpan</text>
+    <rect x="698" y="620" width="304" height="34" rx="8" fill="url(#deskPrimary)" />
+    <text x="850" y="642" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">MASUK SEBAGAI ADMIN</text>
+  </g>
+
+  <!-- ========================================================
+       DESKTOP SCREEN 01: DESKTOP SUITE DASHBOARD (1440 x 850)
+       ======================================================== -->
+  <g id="Desktop-01-Dashboard-Suite" transform="translate(1360, 50)">
+    <text x="720" y="-18" text-anchor="middle" font-size="16" font-weight="700" fill="#94a3b8">Desktop 01 — Dashboard Inventaris &amp; POS (Versi Desktop Layar Lebar)</text>
+    
+    <!-- Outer Browser -->
+    <rect width="1440" height="850" rx="16" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#cardShadow)" />
+    
+    <!-- SIDEBAR (Left 250px) -->
+    <rect width="250" height="850" rx="16" fill="#0f172a" />
+    <!-- Sidebar Header -->
+    <rect x="20" y="24" width="36" height="36" rx="10" fill="url(#deskPrimary)" />
+    <text x="68" y="44" font-size="18" font-weight="800" fill="#ffffff">Stokku</text>
+    <text x="68" y="56" font-size="10" fill="#94a3b8">Desktop Suite v2.0</text>
+    <line x1="0" y1="76" x2="250" y2="76" stroke="#1e293b" stroke-width="1" />
+
+    <!-- User Card in Sidebar -->
+    <rect x="14" y="90" width="222" height="64" rx="10" fill="#1e293b" />
+    <circle cx="44" cy="122" r="18" fill="#f59e0b" />
+    <text x="44" y="128" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">B</text>
+    <text x="72" y="117" font-size="13" font-weight="700" fill="#ffffff">Budi Santoso</text>
+    <rect x="72" y="125" width="90" height="18" rx="9" fill="#fef3c7" />
+    <text x="117" y="137" text-anchor="middle" font-size="9" font-weight="700" fill="#b45309">👑 Manager Toko</text>
+
+    <!-- Menu Items -->
+    <text x="24" y="186" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">MENU UTAMA</text>
+    <!-- Item 1: Active Dashboard -->
+    <rect x="14" y="198" width="222" height="42" rx="8" fill="url(#deskPrimary)" />
+    <text x="48" y="224" font-size="13" font-weight="700" fill="#ffffff">📊 Dashboard (Beranda)</text>
+
+    <!-- Item 2: Master Produk -->
+    <text x="48" y="268" font-size="13" font-weight="600" fill="#94a3b8">📦 Master Data Produk</text>
+    <!-- Item 3: Tambah Produk -->
+    <text x="48" y="310" font-size="13" font-weight="600" fill="#94a3b8">➕ Tambah Produk / Stok</text>
+
+    <text x="24" y="356" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">PENGATURAN</text>
+    <!-- Item 4: Kategori -->
+    <text x="48" y="386" font-size="13" font-weight="600" fill="#94a3b8">🏷️ Kategori &amp; Supplier</text>
+    <!-- Item 5: Profil -->
+    <text x="48" y="428" font-size="13" font-weight="600" fill="#94a3b8">⚙️ Profil &amp; Akun</text>
+
+    <!-- Logout at bottom -->
+    <rect x="14" y="784" width="222" height="42" rx="8" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.3)" />
+    <text x="125" y="810" text-anchor="middle" font-size="12" font-weight="700" fill="#ef4444">🚪 Keluar (Logout)</text>
+
+    <!-- TOPBAR DESKTOP (Right from x=250 to 1440) -->
+    <rect x="250" y="0" width="1190" height="76" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="280" y="38" font-size="20" font-weight="800" fill="#0f172a">Dashboard Inventaris Toko</text>
+    <text x="280" y="56" font-size="12" fill="#64748b">Ringkasan stok dan aksi persetujuan harga real-time</text>
+
+    <!-- Topbar Role Badge -->
+    <rect x="970" y="22" width="260" height="32" rx="16" fill="#fef3c7" />
+    <text x="1100" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">👑 Peran: Manager (Akses Penuh &amp; Edit Harga)</text>
+
+    <rect x="1250" y="20" width="150" height="36" rx="8" fill="url(#deskPrimary)" />
+    <text x="1325" y="43" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">+ Input Produk Baru</text>
+
+    <!-- MAIN BODY CONTENT -->
+    <!-- Alert Banner -->
+    <rect x="280" y="96" width="1120" height="50" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <text x="310" y="126" font-size="18">👑</text>
+    <text x="340" y="120" font-size="13" font-weight="800" fill="#92400e">Mode Manager Aktif</text>
+    <text x="340" y="136" font-size="11" fill="#b45309">Anda memiliki hak akses penuh mengubah harga produk di tabel katalog, persetujuan harga, dan restok.</text>
+
+    <!-- 4 Metric Cards Row -->
+    <!-- Card 1 -->
+    <rect x="280" y="162" width="265" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="304" y="190" font-size="11" font-weight="700" fill="#64748b">TOTAL STOK BARANG</text>
+    <text x="304" y="228" font-size="28" font-weight="800" fill="#0f172a">1,284</text>
+    <text x="304" y="248" font-size="11" fill="#10b981">&#10003; Tersedia di seluruh rak</text>
+
+    <!-- Card 2 -->
+    <rect x="565" y="162" width="265" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="589" y="190" font-size="11" font-weight="700" fill="#64748b">STOK MENIPIS / KRITIS</text>
+    <text x="589" y="228" font-size="28" font-weight="800" fill="#dc2626">12</text>
+    <text x="589" y="248" font-size="11" fill="#dc2626">&#9888; Butuh restok segera</text>
+
+    <!-- Card 3 -->
+    <rect x="850" y="162" width="265" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="874" y="190" font-size="11" font-weight="700" fill="#64748b">JUMLAH SKU PRODUK</text>
+    <text x="874" y="228" font-size="28" font-weight="800" fill="#0f172a">6 Item</text>
+    <text x="874" y="248" font-size="11" fill="#64748b">Terbagi dalam 3 Kategori</text>
+
+    <!-- Card 4 -->
+    <rect x="1135" y="162" width="265" height="100" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="1159" y="190" font-size="11" font-weight="700" fill="#64748b">HAK AKSES ROLE</text>
+    <text x="1159" y="228" font-size="22" font-weight="800" fill="#b45309">Manager Toko</text>
+    <text x="1159" y="248" font-size="11" fill="#059669">Izin Penuh &amp; Ubah Harga</text>
+
+    <!-- Desktop Data Table Card -->
+    <rect x="280" y="280" width="1120" height="530" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="306" y="316" font-size="16" font-weight="800" fill="#0f172a">Master Data Produk &amp; Kontrol Harga</text>
+    <text x="306" y="334" font-size="11" fill="#64748b">Manager dapat mengklik tombol 'Ubah Harga' untuk langsung memperbarui harga jual produk</text>
+
+    <!-- Table Search & Filter Bar -->
+    <rect x="1000" y="298" width="220" height="34" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <text x="1016" y="320" font-size="11" fill="#94a3b8">🔍 Cari nama / SKU...</text>
+    <rect x="1230" y="298" width="150" height="34" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <text x="1246" y="320" font-size="11" fill="#334155">Semua Kategori ▼</text>
+
+    <!-- Table Header Row -->
+    <rect x="281" y="350" width="1118" height="38" fill="#f8fafc" />
+    <text x="306" y="374" font-size="11" font-weight="700" fill="#64748b">PRODUK &amp; SKU</text>
+    <text x="560" y="374" font-size="11" font-weight="700" fill="#64748b">KATEGORI</text>
+    <text x="680" y="374" font-size="11" font-weight="700" fill="#64748b">HARGA GROSIR</text>
+    <text x="810" y="374" font-size="11" font-weight="700" fill="#64748b">HARGA ECERAN</text>
+    <text x="940" y="374" font-size="11" font-weight="700" fill="#64748b">STOK</text>
+    <text x="1040" y="374" font-size="11" font-weight="700" fill="#64748b">STATUS</text>
+    <text x="1190" y="374" font-size="11" font-weight="700" fill="#64748b">AKSI HAK AKSES</text>
+
+    <!-- Row 1 -->
+    <line x1="281" y1="440" x2="1399" y2="440" stroke="#f1f5f9" stroke-width="1" />
+    <text x="306" y="410" font-size="13" font-weight="700" fill="#0f172a">Minyak Goreng 1L</text>
+    <text x="306" y="426" font-size="10" fill="#94a3b8">SKU: MK-001</text>
+    <text x="560" y="418" font-size="12" fill="#334155">Sembako</text>
+    <text x="680" y="418" font-size="12" fill="#475569">Rp 12.000</text>
+    <text x="810" y="418" font-size="13" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <text x="940" y="418" font-size="13" font-weight="800" fill="#0f172a">2 unit</text>
+    <rect x="1040" y="405" width="46" height="20" rx="10" fill="#fee2e2" />
+    <text x="1063" y="419" text-anchor="middle" font-size="9.5" font-weight="700" fill="#dc2626">Kritis</text>
+    <rect x="1190" y="403" width="95" height="26" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <text x="1237" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">🏷️ Ubah Harga</text>
+
+    <!-- Row 2 -->
+    <line x1="281" y1="492" x2="1399" y2="492" stroke="#f1f5f9" stroke-width="1" />
+    <text x="306" y="462" font-size="13" font-weight="700" fill="#0f172a">Beras Premium 5kg</text>
+    <text x="306" y="478" font-size="10" fill="#94a3b8">SKU: BR-005</text>
+    <text x="560" y="470" font-size="12" fill="#334155">Sembako</text>
+    <text x="680" y="470" font-size="12" fill="#475569">Rp 58.000</text>
+    <text x="810" y="470" font-size="13" font-weight="700" fill="#0284c7">Rp 68.000</text>
+    <text x="940" y="470" font-size="13" font-weight="800" fill="#0f172a">5 unit</text>
+    <rect x="1040" y="457" width="56" height="20" rx="10" fill="#fef3c7" />
+    <text x="1068" y="471" text-anchor="middle" font-size="9.5" font-weight="700" fill="#d97706">Menipis</text>
+    <rect x="1190" y="455" width="95" height="26" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <text x="1237" y="472" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">🏷️ Ubah Harga</text>
+
+    <!-- Row 3 -->
+    <line x1="281" y1="544" x2="1399" y2="544" stroke="#f1f5f9" stroke-width="1" />
+    <text x="306" y="514" font-size="13" font-weight="700" fill="#0f172a">Gula Pasir 1kg</text>
+    <text x="306" y="530" font-size="10" fill="#94a3b8">SKU: GL-010</text>
+    <text x="560" y="522" font-size="12" fill="#334155">Sembako</text>
+    <text x="680" y="522" font-size="12" fill="#475569">Rp 12.500</text>
+    <text x="810" y="522" font-size="13" font-weight="700" fill="#0284c7">Rp 14.500</text>
+    <text x="940" y="522" font-size="13" font-weight="800" fill="#0f172a">45 unit</text>
+    <rect x="1040" y="509" width="68" height="20" rx="10" fill="#d1fae5" />
+    <text x="1074" y="523" text-anchor="middle" font-size="9.5" font-weight="700" fill="#059669">Stok Aman</text>
+    <rect x="1190" y="507" width="95" height="26" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <text x="1237" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">🏷️ Ubah Harga</text>
+
+    <!-- Note Role Comparison -->
+    <rect x="306" y="690" width="1070" height="90" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <text x="330" y="720" font-size="13" font-weight="800" fill="#0284c7">&#9432; Penegakan Hak Akses (Role-Based Access Control / RBAC):</text>
+    <text x="330" y="742" font-size="12" fill="#334155">• <strong>Manager:</strong> Tombol 'Ubah Harga' aktif di setiap produk untuk mengganti harga grosir &amp; eceran serta menyetujui perubahan harga.</text>
+    <text x="330" y="762" font-size="12" fill="#334155">• <strong>Admin (Admin Stok):</strong> Kolom aksi otomatis berstatus <strong>🔒 Terkunci (Read-Only)</strong>. Admin bertugas menginput produk baru &amp; cek stok.</text>
+  </g>
+</svg>

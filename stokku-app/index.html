@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stokku Desktop - Sistem Manajemen Stok & POS</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet Desktop -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       VIEW 00: PORTAL PEMILIHAN PERAN (MANAGER VS ADMIN)
+       ============================================================ -->
+  <section class="desktop-view active-view" id="viewRoleSelector">
+    <div class="role-portal-card">
+      <div class="portal-brand">
+        <div class="portal-brand-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <path d="M3 9h18M9 21V9"></path>
+          </svg>
+        </div>
+        <h1>Stokku Desktop Suite</h1>
+      </div>
+      <p class="portal-subtitle">Sistem Manajemen Inventaris &amp; POS Modern. Pilih peran masuk Anda untuk memulai:</p>
+
+      <div class="role-cards-grid">
+        <!-- Role 1: Manager (Sebelumnya Admin) -->
+        <div class="role-card-item selected" id="cardRoleManager" data-role="manager">
+          <div class="role-card-top-row">
+            <div class="role-card-icon manager-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <span class="role-badge-tag tag-manager">Akses Penuh</span>
+          </div>
+          <h3>Manager (Pemilik Toko)</h3>
+          <p class="role-card-desc">Hak akses penuh mengelola harga produk, persetujuan perubahan harga, inventaris, dan pengaturan staf toko.</p>
+          <ul class="role-permissions-list">
+            <li class="allowed"><span class="check-icon">&#10003;</span> <strong>Dapat mengubah harga produk</strong> (Grosir &amp; Eceran)</li>
+            <li class="allowed"><span class="check-icon">&#10003;</span> Setujui / tolak pengajuan perubahan harga</li>
+            <li class="allowed"><span class="check-icon">&#10003;</span> Akses penuh data inventaris, supplier, dan staf</li>
+          </ul>
+        </div>
+
+        <!-- Role 2: Admin (Sebelumnya Cashier) -->
+        <div class="role-card-item" id="cardRoleAdmin" data-role="admin">
+          <div class="role-card-top-row">
+            <div class="role-card-icon admin-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <span class="role-badge-tag tag-admin">Input &amp; Cek Stok</span>
+          </div>
+          <h3>Admin (Admin Stok)</h3>
+          <p class="role-card-desc">Hak operasional untuk menginput produk baru dan mengecek total ketersediaan stok barang toko.</p>
+          <ul class="role-permissions-list">
+            <li class="allowed"><span class="check-icon">&#10003;</span> <strong>Dapat menginput produk &amp; stok baru</strong></li>
+            <li class="allowed"><span class="check-icon">&#10003;</span> <strong>Dapat melihat total stok toko</strong></li>
+            <li class="denied"><span class="cross-icon">&#10005;</span> <em>Terkunci dari edit data setelah berhasil disimpan</em></li>
+            <li class="denied"><span class="cross-icon">&#10005;</span> <em>Tidak memiliki hak mengubah harga produk</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <button type="button" class="btn-submit-desktop" id="btnConfirmRole" style="padding: 12px 36px;">
+        Lanjutkan Masuk &rarr;
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VIEW 01: DESKTOP LOGIN
+       ============================================================ -->
+  <section class="desktop-view" id="viewLogin">
+    <div class="desktop-login-card">
+      <div class="login-top-brand">
+        <div class="portal-brand-logo" style="margin: 0 auto 10px; width: 42px; height: 42px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <path d="M3 9h18M9 21V9"></path>
+          </svg>
+        </div>
+        <h2 style="font-size: 1.3rem; font-weight: 800; color: #0f172a;">Masuk ke Stokku Desktop</h2>
+        <p style="font-size: 0.78rem; color: #64748b; margin-top: 3px;">Kelola stok toko Anda dengan mudah &amp; efisien</p>
+      </div>
+
+      <!-- Penanda Peran Aktif -->
+      <div class="login-role-indicator">
+        <div class="role-indicator-left">
+          <span id="loginRoleBadgeTag" class="role-badge-tag tag-manager" style="margin:0;">Manager</span>
+          <span id="loginRoleTextDesc">Masuk sebagai: <strong>Manager Toko</strong></span>
+        </div>
+        <button type="button" class="btn-change-role" id="btnBackToRoleSelector">Ganti Peran</button>
+      </div>
+
+      <form id="desktopLoginForm">
+        <div class="form-group-desktop">
+          <label class="form-label-desktop">EMAIL / USERNAME</label>
+          <input type="text" id="inputLoginEmail" class="form-input-desktop" required value="manager@tokoberkah.com">
+        </div>
+
+        <div class="form-group-desktop">
+          <label class="form-label-desktop">KATA SANDI</label>
+          <input type="password" id="inputLoginPassword" class="form-input-desktop" required value="password123">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+          <label style="font-size: 0.76rem; color: #64748b; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" checked> Ingat saya
+          </label>
+          <a href="#" style="font-size: 0.76rem; color: #0284c7; text-decoration: none; font-weight: 600;" id="loginLinkForgot">Lupa Kata Sandi?</a>
+        </div>
+
+        <button type="submit" class="btn-submit-desktop" style="width: 100%; justify-content: center;">
+          MASUK KE SISTEM
+        </button>
+
+        <div style="margin-top: 12px; text-align: center;">
+          <button type="button" class="btn-action-pill" id="btnLoadDemoCreds" style="margin: 0 auto; background: #f1f5f9; color: #475569;">
+            ⚡ Muat Kredensial Demo Cepat
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VIEW 02: MAIN DESKTOP APPLICATION LAYOUT
+       ============================================================ -->
+  <section class="desktop-view" id="viewAppMain">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="desktop-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <path d="M3 9h18M9 21V9"></path>
+          </svg>
+        </div>
+        <div class="sidebar-title">
+          <h2>Stokku</h2>
+          <span>Desktop Suite v2.0</span>
+        </div>
+      </div>
+
+      <!-- Active User Card with Switch Role -->
+      <div class="sidebar-user-card">
+        <div class="user-avatar-circle" id="sidebarAvatar">B</div>
+        <div class="user-info-text-side">
+          <div class="user-name-text" id="sidebarUserName">Budi Santoso</div>
+          <span class="user-role-tag-side tag-manager" id="sidebarRoleBadge">👑 Manager Toko</span>
+        </div>
+      </div>
+
+      <!-- Nav Menu Items -->
+      <nav class="sidebar-nav">
+        <span class="nav-heading">Menu Utama</span>
+        <button type="button" class="sidebar-menu-btn active" data-tab="tab-dashboard">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard (Beranda)</span>
+        </button>
+
+        <button type="button" class="sidebar-menu-btn" data-tab="tab-products">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          <span>Master Data Produk</span>
+        </button>
+
+        <button type="button" class="sidebar-menu-btn" data-tab="tab-add-product">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Tambah Produk / Input Stok</span>
+        </button>
+
+        <span class="nav-heading">Master Data &amp; Akun</span>
+        <button type="button" class="sidebar-menu-btn" data-tab="tab-categories">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Kategori &amp; Supplier</span>
+        </button>
+
+        <button type="button" class="sidebar-menu-btn" data-tab="tab-profile">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Profil &amp; Pengaturan</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <button type="button" class="btn-sidebar-logout" id="btnSidebarLogout">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Keluar (Logout)
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="desktop-main-content">
+      <!-- TOPBAR DESKTOP -->
+      <header class="desktop-topbar">
+        <div class="topbar-left">
+          <div class="page-breadcrumb">
+            <h2 id="topbarPageTitle">Dashboard (Beranda)</h2>
+            <p id="topbarPageSubtitle">Ringkasan inventaris dan performa stok toko</p>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Role Permission Tag -->
+          <div class="role-permission-badge tag-manager" id="topbarRolePermissionTag">
+            <span>👑 Peran: Manager (Akses Penuh &amp; Edit Harga)</span>
+          </div>
+
+          <button type="button" class="btn-topbar-add" id="btnTopbarAddProduct">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            + Input Produk Baru
+          </button>
+        </div>
+      </header>
+
+      <!-- BODY CONTENT BY TAB -->
+      <div class="content-body-padding">
+
+        <!-- ====================================================
+             TAB 01: DASHBOARD
+             ==================================================== -->
+        <div class="desktop-tab-content active-content" id="tab-dashboard">
+          
+          <!-- Role Context Alert -->
+          <div class="role-info-alert-banner banner-manager" id="dashboardRoleAlert">
+            <div class="banner-left-info">
+              <div style="font-size: 1.3rem;">👑</div>
+              <div>
+                <h4>Mode Manager Aktif</h4>
+                <p>Anda memiliki hak akses penuh untuk mengubah harga produk (Grosir &amp; Eceran), meninjau persetujuan, dan mengelola stok.</p>
+              </div>
+            </div>
+            <button type="button" class="btn-action-pill" id="btnSwitchToAdmin" style="background: white; color: #0284c7; border: 1px solid #cbd5e1;">
+              Coba Mode Admin &rarr;
+            </button>
+          </div>
+
+          <!-- 4 Desktop Metric Cards -->
+          <div class="stats-cards-row">
+            <!-- Metric 1 -->
+            <div class="desktop-stat-card">
+              <div class="stat-card-header">
+                <span>Total Stok Barang</span>
+                <div class="stat-icon-wrapper" style="background: #e0f2fe; color: #0284c7;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="dashTotalStock">1,284</div>
+              <div class="stat-trend">&#10003; Real-time dari seluruh kategori</div>
+            </div>
+
+            <!-- Metric 2 -->
+            <div class="desktop-stat-card">
+              <div class="stat-card-header">
+                <span>Stok Menipis / Kritis</span>
+                <div class="stat-icon-wrapper" style="background: #fee2e2; color: #dc2626;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="dashLowStockCount" style="color: #dc2626;">12</div>
+              <div class="stat-trend warning">&#9888; Butuh restok segera</div>
+            </div>
+
+            <!-- Metric 3 -->
+            <div class="desktop-stat-card">
+              <div class="stat-card-header">
+                <span>Jumlah SKU Produk</span>
+                <div class="stat-icon-wrapper" style="background: #fef3c7; color: #d97706;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="dashTotalSku">6 Produk</div>
+              <div class="stat-trend">Dalam 3 Kategori Aktif</div>
+            </div>
+
+            <!-- Metric 4 -->
+            <div class="desktop-stat-card">
+              <div class="stat-card-header">
+                <span>Peran Anda</span>
+                <div class="stat-icon-wrapper" style="background: #f1f5f9; color: #475569;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="dashRoleLabel" style="font-size: 1.25rem;">Manager</div>
+              <div class="stat-trend" id="dashRoleSubtext">Izin Penuh &amp; Edit Harga</div>
+            </div>
+          </div>
+
+          <!-- Section Persetujuan (Khusus Manager) -->
+          <div class="approval-panel" id="managerApprovalSection">
+            <div class="approval-panel-left">
+              <h4>Permintaan Perubahan Harga: Minyak Goreng 1L</h4>
+              <p>Staf mengajukan kenaikan harga: <strong>Rp 14.000 &rarr; Rp 15.000</strong> • Alasan: Kenaikan harga modal supplier</p>
+            </div>
+            <div class="approval-panel-actions">
+              <button type="button" class="btn-action-pill btn-accept" id="btnAcceptPriceChange">
+                &#10003; Setujui Perubahan Harga
+              </button>
+              <button type="button" class="btn-action-pill btn-reject" id="btnRejectPriceChange">
+                &#10005; Tolak
+              </button>
+            </div>
+          </div>
+
+          <!-- Tabel Produk Perlu Perhatian -->
+          <div class="desktop-table-card">
+            <div class="table-card-header">
+              <h3>Produk Perlu Perhatian (Stok Menipis &amp; Kritis)</h3>
+              <button type="button" class="btn-action-pill" id="btnViewAllProductsFromDash" style="background: #e0f2fe; color: #0284c7;">
+                Buka Semua Produk &rarr;
+              </button>
+            </div>
+            <table class="custom-desktop-table">
+              <thead>
+                <tr>
+                  <th>Produk</th>
+                  <th>Kategori</th>
+                  <th>Harga Grosir</th>
+                  <th>Harga Eceran</th>
+                  <th>Sisa Stok</th>
+                  <th>Status</th>
+                  <th>Aksi Role</th>
+                </tr>
+              </thead>
+              <tbody id="dashboardAttentionTableBody">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ====================================================
+             TAB 02: MASTER DATA PRODUK (DESKTOP TABLE)
+             ==================================================== -->
+        <div class="desktop-tab-content" id="tab-products">
+          <div class="desktop-table-card">
+            <div class="table-card-header">
+              <div>
+                <h3>Daftar Master Data Produk</h3>
+                <p style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">
+                  <span id="productTableRoleInfo">Role Manager dapat mengubah harga dengan tombol 'Ubah Harga'.</span>
+                </p>
+              </div>
+
+              <div class="table-toolbar-actions">
+                <input type="text" id="desktopProductSearch" class="search-input-desktop" placeholder="Cari nama atau SKU produk...">
+                
+                <select id="desktopCategoryFilter" class="select-filter-desktop">
+                  <option value="Semua">Semua Kategori</option>
+                  <option value="Sembako">Sembako</option>
+                  <option value="Minuman">Minuman</option>
+                  <option value="Snack">Snack &amp; Makanan Ringan</option>
+                </select>
+
+                <select id="desktopStockFilter" class="select-filter-desktop">
+                  <option value="Semua">Semua Status</option>
+                  <option value="kritis">Kritis</option>
+                  <option value="menipis">Menipis</option>
+                  <option value="aman">Stok Aman</option>
+                </select>
+              </div>
+            </div>
+
+            <table class="custom-desktop-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Produk &amp; SKU</th>
+                  <th>Kategori</th>
+                  <th>Harga Grosir</th>
+                  <th>Harga Eceran</th>
+                  <th>Stok</th>
+                  <th>Status</th>
+                  <th>Aksi Hak Akses</th>
+                </tr>
+              </thead>
+              <tbody id="desktopProductTableBody">
+                <!-- Rendered dynamically by script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ====================================================
+             TAB 03: TAMBAH PRODUK / INPUT STOK
+             ==================================================== -->
+        <div class="desktop-tab-content" id="tab-add-product">
+          <div class="desktop-form-card">
+            <div style="margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #e2e8f0;">
+              <h3 style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">Input Produk &amp; Stok Baru</h3>
+              <p style="font-size: 0.8rem; color: #64748b; margin-top: 3px;">
+                Dapat diisi oleh <strong>Manager maupun Admin</strong>. 
+                <span style="color: #0284c7; font-weight: 600;">(Catatan Admin: Data yang berhasil disimpan akan langsung terkunci untuk mencegah manipulasi data/harga).</span>
+              </p>
+            </div>
+
+            <form id="desktopFormAddProduct">
+              <div class="form-grid-desktop">
+                <!-- Left: Photo Upload Zone -->
+                <div>
+                  <div class="upload-zone-desktop" id="desktopDropzone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #0284c7;">+ Upload Foto Produk</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8;">Format PNG, JPG maks. 2MB</div>
+                  </div>
+                </div>
+
+                <!-- Right: Inputs -->
+                <div>
+                  <div class="form-group-desktop">
+                    <label class="form-label-desktop">NAMA PRODUK</label>
+                    <input type="text" id="addProdName" class="form-input-desktop" placeholder="Contoh: Minyak Goreng Sania 2L" required>
+                  </div>
+
+                  <div class="form-2col">
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">KODE / SKU PRODUK</label>
+                      <input type="text" id="addProdSku" class="form-input-desktop" placeholder="cth: SKU-BRG0099">
+                    </div>
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">KATEGORI PRODUK</label>
+                      <select id="addProdCat" class="form-select-desktop">
+                        <option value="Sembako">Sembako</option>
+                        <option value="Minuman">Minuman</option>
+                        <option value="Snack">Snack &amp; Makanan Ringan</option>
+                        <option value="Perlengkapan Mandi">Perlengkapan Mandi</option>
+                        <option value="Rokok">Rokok</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-2col">
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">HARGA GROSIR (MODAL)</label>
+                      <input type="text" id="addProdWholesale" class="form-input-desktop" placeholder="Rp 12.000">
+                    </div>
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">HARGA ECERAN (JUAL)</label>
+                      <input type="text" id="addProdRetail" class="form-input-desktop" placeholder="Rp 15.000" required>
+                    </div>
+                  </div>
+
+                  <div class="form-2col">
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">JUMLAH STOK AWAL</label>
+                      <input type="number" id="addProdStock" class="form-input-desktop" placeholder="10" min="0" required>
+                    </div>
+                    <div class="form-group-desktop">
+                      <label class="form-label-desktop">BATAS PERINGATAN MINIMUM</label>
+                      <input type="number" id="addProdMinStock" class="form-input-desktop" value="5" min="1">
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 8px;">
+                    <button type="submit" class="btn-submit-desktop">
+                      SIMPAN PRODUK &amp; STOK KE SISTEM
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ====================================================
+             TAB 04: KATEGORI & SUPPLIER
+             ==================================================== -->
+        <div class="desktop-tab-content" id="tab-categories">
+          <div class="desktop-table-card">
+            <div class="table-card-header">
+              <h3>Data Pengelompokan &amp; Supplier Toko</h3>
+              <button type="button" class="btn-topbar-add" id="btnAddCategory">+ Tambah Kategori</button>
+            </div>
+            <table class="custom-desktop-table">
+              <thead>
+                <tr>
+                  <th>Nama Kategori</th>
+                  <th>Jumlah Produk</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sembako</strong></td>
+                  <td>240 Produk</td>
+                  <td><span class="status-pill aman">Aktif</span></td>
+                  <td><button class="btn-edit-price" style="background:#f1f5f9; color:#475569; border-color:#cbd5e1;">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Minuman</strong></td>
+                  <td>85 Produk</td>
+                  <td><span class="status-pill aman">Aktif</span></td>
+                  <td><button class="btn-edit-price" style="background:#f1f5f9; color:#475569; border-color:#cbd5e1;">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Snack &amp; Makanan Ringan</strong></td>
+                  <td>120 Produk</td>
+                  <td><span class="status-pill aman">Aktif</span></td>
+                  <td><button class="btn-edit-price" style="background:#f1f5f9; color:#475569; border-color:#cbd5e1;">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Perlengkapan Mandi</strong></td>
+                  <td>45 Produk</td>
+                  <td><span class="status-pill aman">Aktif</span></td>
+                  <td><button class="btn-edit-price" style="background:#f1f5f9; color:#475569; border-color:#cbd5e1;">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Rokok</strong></td>
+                  <td>32 Produk</td>
+                  <td><span class="status-pill aman">Aktif</span></td>
+                  <td><button class="btn-edit-price" style="background:#f1f5f9; color:#475569; border-color:#cbd5e1;">Detail</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ====================================================
+             TAB 05: PROFIL & PENGATURAN
+             ==================================================== -->
+        <div class="desktop-tab-content" id="tab-profile">
+          <div class="desktop-form-card">
+            <h3 style="font-size: 1.2rem; font-weight: 800; color: #0f172a; margin-bottom: 4px;">Profil &amp; Hak Akses Pengguna</h3>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 20px;">Informasi akun Anda di sistem Stokku Desktop</p>
+
+            <div style="display: flex; align-items: center; gap: 16px; padding: 18px; background: #f8fafc; border-radius: 12px; margin-bottom: 20px;">
+              <div class="user-avatar-circle" id="profileCardAvatar" style="width: 54px; height: 54px; font-size: 1.25rem;">B</div>
+              <div>
+                <h4 id="profileCardName" style="font-size: 1.1rem; font-weight: 800; color: #0f172a;">Budi Santoso</h4>
+                <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                  <span class="role-badge-tag tag-manager" id="profileCardRoleTag">Manager (Pemilik Toko)</span>
+                  <span style="font-size: 0.76rem; color: #64748b;">Toko Kelontong Berkah</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-2col">
+              <div class="form-group-desktop">
+                <label class="form-label-desktop">NAMA TOKO</label>
+                <input type="text" class="form-input-desktop" value="Toko Kelontong Berkah" readonly>
+              </div>
+              <div class="form-group-desktop">
+                <label class="form-label-desktop">EMAIL TERDAFTAR</label>
+                <input type="text" class="form-input-desktop" id="profileCardEmail" value="manager@tokoberkah.com" readonly>
+              </div>
+            </div>
+
+            <div style="margin-top: 16px;">
+              <button type="button" class="btn-submit-desktop" id="btnSwitchRoleFromProfile" style="background: #0f172a;">
+                🔄 Ganti Peran (Manager &harr; Admin)
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </section>
+
+  <!-- ============================================================
+       MODAL POPUP: UBAH HARGA PRODUK (KHUSUS MANAGER)
+       ============================================================ -->
+  <div class="modal-overlay" id="modalEditPrice">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <h3>Ubah Harga Produk</h3>
+          <span style="font-size: 0.72rem; color: #059669; font-weight: 700;">&#10003; Fitur Eksklusif Role Manager</span>
+        </div>
+        <button type="button" class="btn-close-modal" id="btnCloseEditPriceModal">&times;</button>
+      </div>
+
+      <div style="background: #f8fafc; padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;">
+        <div style="font-size: 0.92rem; font-weight: 800; color: #0f172a;" id="modalProductName">Minyak Goreng 1L</div>
+        <div style="font-size: 0.74rem; color: #64748b;" id="modalProductSku">SKU: MK-001 • Sembako</div>
+      </div>
+
+      <form id="formSubmitPriceChange">
+        <input type="hidden" id="modalProductId">
+
+        <div class="form-group-desktop">
+          <label class="form-label-desktop">HARGA GROSIR (MODAL)</label>
+          <input type="text" id="modalWholesalePrice" class="form-input-desktop" placeholder="Rp 12.000" required>
+        </div>
+
+        <div class="form-group-desktop">
+          <label class="form-label-desktop">HARGA ECERAN (JUAL)</label>
+          <input type="text" id="modalRetailPrice" class="form-input-desktop" placeholder="Rp 15.000" required>
+        </div>
+
+        <div class="modal-actions-row">
+          <button type="button" class="btn-secondary-modal" id="btnCancelEditPrice">Batal</button>
+          <button type="submit" class="btn-submit-desktop" style="padding: 8px 20px;">Simpan Perubahan Harga</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="desktopToast">
+    <span id="toastIcon">&#10003;</span> <span id="toastMessage">Aksi berhasil dilakukan</span>
+  </div>
+
+  <!-- Script Desktop Controller -->
+  <script src="script.js"></script>
+</body>
+</html>
