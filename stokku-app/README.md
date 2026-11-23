@@ -115,12 +115,28 @@ Pengguna dapat berganti peran kapan saja melalui menu **Ganti Akun** di pojok ki
    - Pengurangan stok otomatis saat faktur disimpan.
    - **Kolaborasi Koreksi:** Manager dapat menambahkan catatan koreksi faktur (maks 500 karakter) yang dapat dibaca oleh Admin.
 
-5. **Statistik Bisnis & Pareto Chart (Manager):**
+5. **Statistik Bisnis line chart, bar chart dan pie chart (Manager):**
    - Metrik modal stok, potensi omzet, perkiraan keuntungan, margin potensi %, dan estimasi kerugian reject.
-   - **Interactive Pareto Chart:** Menampilkan batang keuntungan periode (diurutkan dari kontribusi terbesar) dan kurva kumulatif 0–100% untuk periode Mingguan maupun Bulanan.
+   - ** line Chart:** Menampilkan garis keuntungan periode (diurutkan dari kontribusi terbesar) dan kurva kumulatif 0–100% untuk periode Mingguan maupun Bulanan.
+   - diagram batan, yang menampilkan jumlah produk produk yang masuk kedalam kategori jenis apa, seperti makanan,snack, minuman, dll.
+   - Pie chart, yang menampilkan seluruh data faktur yang memisahkan antara pembeli atau client yang telah melakukan pembayaran, menyicil, hingga belum membayar sama sekali terhadap produk yang telah dipesan dan dicatat oleh role admin.
+
+
+
 
 6. **Notifikasi Riwayat Harga:**
    - Ikon lonceng di header mencatat seluruh riwayat perubahan harga oleh Manager (harga lama ➔ harga baru) secara transparan.
 
 7. **Profil & Sesi:**
    - Informasi usaha *Toko Kelontong Berkah*, ganti akun, dan fitur logout.
+  
+<img width="947" height="513" alt="Screenshot 2026-11-23 165806" src="https://github.com/user-attachments/assets/0b1eb137-e760-4fe1-a681-53a411633e1a" />
+<img width="947" height="513" alt="Screenshot 2026-11-23 165752" src="https://github.com/user-attachments/assets/6e74726b-7f12-41e5-8eb1-5de813f70a09" />
+<img width="944" height="509" alt="Screenshot 2026-11-23 165745" src="https://github.com/user-attachments/assets/ac252231-d6c6-4c12-8d8a-b6df7855e299" />
+<img width="946" height="515" alt="Screenshot 2026-11-23 165735" src="https://github.com/user-attachments/assets/86006b71-bc84-4ca2-8d0d-b373fa73e8c8" />
+<img width="948" height="515" alt="Screenshot 2026-11-23 165726" src="https://github.com/user-attachments/assets/f148d6af-4df7-4e1b-9c36-c21bedfa8ca5" />
+<img width="946" height="511" alt="Screenshot 2026-11-23 165717" src="https://github.com/user-attachments/assets/7b57970c-1811-4d20-8c1d-6bbf93fff808" />
+<img width="943" height="512" alt="Screenshot 2026-11-23 165709" src="https://github.com/user-attachments/assets/52b7436c-e19d-45ce-981f-9d108432a5f8" />
+<img width="948" height="512" alt="Screenshot 2026-11-23 165652" src="https://github.com/user-attachments/assets/beb65e95-925f-414b-a338-0c64b3f15236" />
+<img width="710" height="509" alt="Screenshot 2026-11-23 163745" src="https://github.com/user-attachments/assets/e403bcf6-f516-49de-a5af-2847e0c4f9ae" />
+
