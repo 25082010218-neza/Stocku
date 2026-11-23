@@ -1,0 +1,17 @@
+# Flutter / Dart
+**/build/
+**/.dart_tool/
+**/.pub/
+**/.pub-cache/
+**/ephemeral/
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Node / Web
+**/node_modules/
+**/dist/
+
+# System / IDE
+.DS_Store
+Thumbs.db
