@@ -18,9 +18,14 @@ aplikasi_stocku/
 │   └── settings.json            # Konfigurasi path SDK Flutter & Dart
 ├── dart_api/                    # Backend REST API Dart (Shelf + MySQL)
 │   ├── bin/
-│   │   └── server.dart          # Server API, middleware, & endpoint Stokku
-│   ├── migrations/
-│   │   └── 002_invoice_profit.sql
+│   │   └── server.dart          # HTTP Router & Controller (bebas dari SQL mentah)
+│   ├── lib/
+│   │   ├── database_service.dart# Service eksekusi query & transaksi database
+│   │   └── sql_queries.dart     # Kumpulan konstanta query SQL terpusat
+│   ├── sql/
+│   │   ├── schema.sql           # Skema DDL tabel database MySQL
+│   │   ├── queries.sql          # Kumpulan query SQL (SELECT, INSERT, UPDATE, DELETE)
+│   │   └── seed.sql             # Data awal / sampel produk dan faktur
 │   ├── pubspec.yaml             # Dependensi server Dart
 │   └── schema.sql               # Skema database MySQL
 ├── flutter_app/                 # Aplikasi Desktop Stokku (Flutter Windows Desktop)

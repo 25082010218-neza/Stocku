@@ -1,3 +1,9 @@
+-- =======================================================
+-- STOKKU DATABASE SCHEMA (DDL)
+-- Database: stokku
+-- Charset: utf8mb4 / utf8mb4_unicode_ci
+-- =======================================================
+
 CREATE DATABASE IF NOT EXISTS stokku
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
@@ -34,10 +40,10 @@ CREATE TABLE IF NOT EXISTS invoices (
   invoice_number VARCHAR(40) NOT NULL UNIQUE,
   customer VARCHAR(150) NOT NULL,
   contact VARCHAR(150) NOT NULL DEFAULT "",
-  payment_type ENUM("cash", "credit") NOT NULL,
-  payment_status ENUM("paid", "unpaid") NOT NULL,
+  payment_type ENUM("cash", "credit") NOT NULL DEFAULT "cash",
+  payment_status ENUM("paid", "unpaid", "credit") NOT NULL DEFAULT "unpaid",
   due_date DATE NULL,
-  total BIGINT UNSIGNED NOT NULL,
+  total BIGINT UNSIGNED NOT NULL DEFAULT 0,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
@@ -59,7 +65,7 @@ CREATE TABLE IF NOT EXISTS invoice_lines (
 CREATE TABLE IF NOT EXISTS invoice_comments (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   invoice_id BIGINT UNSIGNED NOT NULL,
-  actor_role ENUM("manager") NOT NULL DEFAULT "manager",
+  actor_role ENUM("manager", "admin", "gudang") NOT NULL DEFAULT "manager",
   actor_name VARCHAR(150) NOT NULL,
   message VARCHAR(500) NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
